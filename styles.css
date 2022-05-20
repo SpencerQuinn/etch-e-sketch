@@ -1,0 +1,146 @@
+*, *:before, *::after{
+    box-sizing: border-box
+
+}
+
+body{
+    text-align: center;
+}
+
+.input-container{
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 50px;
+    position: absolute;
+    gap: 20px;
+}
+
+.input-container > *{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.color-wheel{
+    position: relative;
+    box-sizing: border-box;
+    width: 150px;
+    height: 150px;
+    border: 1px transparent solid;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform .3s ease;
+
+}
+
+.color-wheel::after{
+    content: "";
+    box-sizing: border-box;
+    height: 100px;
+    width: 100px;
+    right: 25px;
+    bottom: 25px;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: white;
+    position: absolute;
+}
+
+.color{
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: 50px;
+    border-width: 75px 25px 0px 25px;
+    border-color: red transparent transparent transparent;
+    border-style: solid;
+    transform-origin: 25px 75px;
+    z-index: -1;
+
+}
+
+
+.color[data-color="red"]{
+    border-color: red transparent transparent transparent;
+
+}
+
+.color[data-color="orange"]{
+    transform: rotate(36deg);
+    border-color: orange transparent transparent transparent;
+
+}
+
+.color[data-color="yellow"]{
+    transform: rotate(72deg);
+    border-color: yellow transparent transparent transparent;
+
+}
+
+.color[data-color="green"]{
+    transform: rotate(108deg);
+    border-color: green transparent transparent transparent;
+
+}
+
+.color[data-color="blue"]{
+    transform: rotate(144deg);
+    border-color: blue transparent transparent transparent;
+
+}
+.color[data-color="purple"]{
+    transform: rotate(180deg);
+    border-color: purple transparent transparent transparent;
+
+}
+.color[data-color="white"]{
+    transform: rotate(216deg);
+    border-color: white transparent transparent transparent;
+
+}
+.color[data-color="black"]{
+    transform: rotate(252deg);
+    border-color: black transparent transparent transparent;
+
+}
+
+.color[data-color="grey"]{
+    transform: rotate(288deg);
+    border-color: grey transparent transparent transparent;
+
+}
+
+.color[data-color="brown"]{
+    transform: rotate(324deg);
+    border-color: brown transparent transparent transparent;
+
+}
+
+button.color-select{
+    display: inline-block;
+    width: 50%;
+    
+}
+
+
+
+
+
+
+.etch-container{
+    margin: 50px auto auto auto;
+    height: 500px;
+    width: 500px;
+    background-color: black;
+    display: grid;
+
+}
+
+.board-square{
+    background-color: white;
+    border: black .1px solid;
+}
