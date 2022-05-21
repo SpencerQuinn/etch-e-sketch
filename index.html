@@ -12,27 +12,26 @@
     <div class="input-container">
         <div class="color-selection">
             <div class="color-wheel">
-                <div data-color="red" class="color"></div>
-                <div data-color="orange" class="color"></div>
-                <div data-color="yellow" class="color"></div>
-                <div data-color="green" class="color"></div>
-                <div data-color="blue" class="color"></div>
-                <div data-color="purple" class="color"></div>
-                <div data-color="black" class="color"></div>
-                <div data-color="white" class="color"></div>
-                <div data-color="grey" class="color"></div>
-                <div data-color="brown" class="color"></div>
+                <div data-color="red" data-position="0" class="color"></div>
+                <div data-color="orange" data-position="1" class="color"></div>
+                <div data-color="yellow" data-position="2" class="color"></div>
+                <div data-color="green" data-position="3" class="color"></div>
+                <div data-color="blue" data-position="4" class="color"></div>
+                <div data-color="purple" data-position="5" class="color"></div>
+                <div data-color="white" data-position="6" class="color"></div>
+                <div data-color="black" data-position="7" class="color"></div>
+                <div data-color="grey" data-position="8" class="color"></div>
+                <div data-color="brown" data-position="9" class="color"></div>
             </div>
             <div class="color-select buttons">
-                <button class="color-select left">Left</button><button class="color-select right">Right</button>
-                
+                <button value="-1" class="color-select left"></button><button value="1" class="color-select right"></button>
             </div>
         </div>
         <div class="side-height">Pick a size!
             <input type="number" class="side-height set-height">
             
         </div>
-        <button style="text-align: center">Generate Board!</button><button>Clear Board!</button>
+        <button class="generate-board" style="text-align: center">Generate Board!</button><button class="clear-board">Clear Board!</button>
     </div>
 
     <div class="etch-container"></div>
