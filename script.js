@@ -8,6 +8,7 @@ const colorWheel = document.querySelector('.color-wheel')
 let sideHeight = 0
 let userColor = "red"
 let wheelRotate = 0
+let mousedown = false
 
 
 
@@ -25,8 +26,22 @@ function generateBoard(){
     
 }
 
+
+    document.addEventListener('mousedown', function(){
+        mousedown = true
+    })
+    document.addEventListener('mouseup', function(){
+        mousedown = false
+    })
+
+
+
 function assignColorListener(){
     document.querySelectorAll('.board-square').forEach(sqr => sqr.addEventListener('mouseover', function(e){
+        e.target.style.backgroundColor = userColor
+        console.log(e.target)
+    }));
+    document.querySelectorAll('.board-square').forEach(sqr => sqr.addEventListener('mousedown', function(e){
         e.target.style.backgroundColor = userColor
         console.log(e.target)
     }));
