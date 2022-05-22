@@ -28,23 +28,25 @@ function generateBoard(){
 
 
     document.addEventListener('mousedown', function(){
-        mousedown = true
+        mousedown = true;
+        console.log(mousedown)
     })
     document.addEventListener('mouseup', function(){
         mousedown = false
+        console.log(mousedown)
     })
 
 
 
 function assignColorListener(){
     document.querySelectorAll('.board-square').forEach(sqr => sqr.addEventListener('mouseover', function(e){
+        if(mousedown){
         e.target.style.backgroundColor = userColor
         console.log(e.target)
+        }
+        return
     }));
-    document.querySelectorAll('.board-square').forEach(sqr => sqr.addEventListener('mousedown', function(e){
-        e.target.style.backgroundColor = userColor
-        console.log(e.target)
-    }));
+   
 }
 
 function clearBoard(){
