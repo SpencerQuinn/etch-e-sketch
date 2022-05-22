@@ -61,13 +61,13 @@ document.querySelectorAll("button.color-select").forEach(butt => butt.addEventLi
 document.querySelector(".set-height").addEventListener('input', function(){
     sideHeight = Math.round(this.value)
     this.style.backgroundColor = "white"
-    if(this.value > 200){
+    if(this.value > 200 || this.value < 0){
         this.style.backgroundColor = "red"
         sideHeight = 200
-        alert("Must be less than 200")
+        alert("Must be between 1 and 200")
         this.value = ''
     }
-    console.log(sideHeight)
+    console.log(typeof parseInt(this.value))
 })
 
 document.querySelector('.generate-board').addEventListener('click', generateBoard)

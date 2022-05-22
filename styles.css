@@ -182,10 +182,11 @@ button.right::after{
     width: 500px;
     background-color: white;
     display: grid;
+    border: 1px solid black;
 
 }
 
 .board-square{
     background-color: white;
-    border: black .1px solid;
+
 }
